@@ -21,10 +21,11 @@ function formatQueryParams(params) {
                       <a href=${responseJson.data[i].url} target="_blank">
                       <h3>${responseJson.data[i].fullName}</h3></a>
                       <h4>${responseJson.data[i].description}</h4>
+                      <br>
                       <p>${responseJson.data[i].addresses[1].line1}<br>
                       ${responseJson.data[i].addresses[1].city}, 
-                      ${responseJson.data[i].addresses[1].stateCode}</p>
-                      ${responseJson.data[i].addresses[1].postalCode}
+                      ${responseJson.data[i].addresses[1].stateCode}<br>
+                      ${responseJson.data[i].addresses[1].postalCode}</p>
                     </li>
                 `
                 );
