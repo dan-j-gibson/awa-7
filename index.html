@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks - AWA-7</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class='container'>
+    <div class='input-container'>
        <h1>National Parks Directory</h1>
        <form id='js-form'>
-           <label>Enter park name</label>
+           <!-- <label>Enter park name</label>
            <input type='text' name='search-area' id='js-search-area' placeholder='e.g. Yellowstone Park'>
-           <br>
-           <label>Max number of results</label>
+           <br> -->           
+           <label>States</label>
+           <input type='text' name='multiple-states' id='js-multiple-states' placeholder='CA, OR, WA'>
+            <br>
+           <label>Max # of results</label>
            <input type='text' name='max-results' id='js-max-results' required value='10'>
-           <br>
-           <label>State</label>
-           <input type='text' name='multiple-states' id='js-multiple-states' placeholder='e.g. CA, OR, WA'>
+            <br>
            <button type="submit">Search</button>
        </form>
+    </div>
        <section id="results" class="hidden">
         <h2>Search results</h2>
         <ul id="results-list">
