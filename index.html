@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Parks - AWA-7</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+   <div class='container'>
+       <h1>National Parks Directory</h1>
+       <form id='js-form'>
+           <label>Enter park name</label>
+           <input type='text' name='search-area' id='js-search-area' placeholder='e.g. Yellowstone Park'>
+           <br>
+           <label>Max number of results</label>
+           <input type='text' name='max-results' id='js-max-results' required value='10'>
+           <br>
+           <label>State</label>
+           <input type='text' name='multiple-states' id='js-multiple-states' placeholder='e.g. CA, OR, WA'>
+           <button type="submit">Search</button>
+       </form>
+       <section id="results" class="hidden">
+        <h2>Search results</h2>
+        <ul id="results-list">
+        </ul>
+      </section>
+   </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>   
+</body>
+</html>
