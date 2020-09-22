@@ -17,6 +17,16 @@
     width: fit-content;
   }
 
+ul {
+    padding-right: 10%;
+    display: inline-block}
+
 li {
-    padding: 4px;
+    list-style: none;
+    align-content: left;
+
 }
+
+a:hover {color:green};
+a:visited{color:blue}
+

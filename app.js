@@ -3,13 +3,14 @@
 const apiKey='60nlsIVM3HBtdQionDcOxEWoMsFQEBxqQpRRTpzJ'
 const url='https://developer.nps.gov/api/v1/parks?api_key=' + apiKey;
 
+// adds formatting for each new parameter after API key
 function formatQueryParams(params) {
     const queryItems = Object.keys(params)
       .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
     return queryItems.join('&');
   }
 
-
+// displays national parks along with link to .gov site
   function displayResults(responseJson){
     console.log(responseJson);
     $('#results').removeClass('hidden');
@@ -21,22 +22,23 @@ function formatQueryParams(params) {
                       <a href=${responseJson.data[i].url} target="_blank">
                       <h3>${responseJson.data[i].fullName}</h3></a>
                       <h4>${responseJson.data[i].description}</h4>
+                      <p>${responseJson.data[i].addresses[i].line1}
+                      <br> ${responseJson.data[i].addresses[i].city}, 
+                      ${responseJson.data[i].addresses[i].stateCode}   
+                      ${responseJson.data[i].addresses[i].postalCode}
                     </li>
-                </ul>`
+                `
                 );
             }
   };
 
 
   function getParksList(query, limit, stateArray) {
-    
       console.log(stateArray)
-      // for(let i = 0; i < stateArray.length; i++){
         const params = {
             q: query,
             limit
         };
-      // }
       const queryString = formatQueryParams(params)
       let finalUrl = url + '&' + queryString
         for (let i = 0; i < stateArray.length; i++) {
